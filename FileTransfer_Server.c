@@ -39,7 +39,7 @@ int main(int argc, char *argv[]){
 			ipver = "IPv4";
 		}
 		else{
-			struct sockaddr_in6 = *ipv6 = (struct sockaddr_in6 *)p->ai_addr;
+			struct sockaddr_in6 *ipv6 = (struct sockaddr_in6 *)p->ai_addr;
 			addr = &(ipv6->sin6_addr);
 			ipver = "IPv6";
 		}
@@ -50,7 +50,7 @@ int main(int argc, char *argv[]){
 	}
 
 	//	free the linked list
-	freeadddrinfo(res);
+	freeaddrinfo(res);
 
 	return 0;
 }
